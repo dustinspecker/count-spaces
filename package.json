@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/dustinspecker/count-spaces.git"
   },
+  "files": [
+    "lib"
+  ],
   "keywords": [],
   "author": "Dustin Specker",
   "license": "MIT",
