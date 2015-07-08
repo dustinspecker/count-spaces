@@ -1,6 +1,6 @@
 {
   "name": "count-spaces",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Count number of spaces",
   "main": "lib/index.js",
   "scripts": {
