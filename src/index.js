@@ -1,16 +1,28 @@
 'use strict';
 
 /**
+ * Verifies str is a string
+ * @param {String} str - string to verify type
+ * @throws {TypeError} - if str is not a string
+ */
+function typeCheck(str) {
+  if (typeof str !== 'string') {
+    throw new TypeError('Expected a string');
+  }
+}
+
+/**
  * Returns the number of spaces at end of a line
  * @param {String} str - str to analyze
  * @return {Number} - number of spaces at end of line
  */
 exports.end = function (str) {
-  let i = str.length - 1
-    , spacesCount = 0;
+  let spacesCount = 0
+    , i;
 
-  while (str[i] === ' ') {
-    i--;
+  typeCheck(str);
+
+  for (i = str.length - 1; str[i] === ' '; i--) {
     spacesCount++;
   }
 
@@ -23,6 +35,8 @@ exports.end = function (str) {
  * @return {Number} - number of spaces at beginning of line
  */
 exports.start = function (str) {
+  typeCheck(str);
+
   return str.substring(0, str.search(/[^ ]/)).length;
 };
 
@@ -32,7 +46,11 @@ exports.start = function (str) {
  * @return {Number} - number of spaces in a line
  */
 exports.total = function (str) {
-  const match = str.match(/ /g);
+  let match;
+
+  typeCheck(str);
+
+  match = str.match(/ /g);
 
   if (match) {
     return match.length;

@@ -12,6 +12,14 @@ describe('count-spaces', () => {
     it('should count ending spaces', () => {
       expect(end('some spaces  ')).to.eql(2);
     });
+
+    it('should throw error when not given a string', () => {
+      function testFunction() {
+        end(null);
+      }
+
+      expect(testFunction).to.throw(TypeError, /Expected a string/);
+    });
   });
 
   describe('start', () => {
@@ -22,6 +30,14 @@ describe('count-spaces', () => {
     it('should count beginning spaces', () => {
       expect(start('  start')).to.eql(2);
     });
+
+    it('should throw error when not given a string', () => {
+      function testFunction() {
+        start(null);
+      }
+
+      expect(testFunction).to.throw(TypeError, /Expected a string/);
+    });
   });
 
   describe('total', () => {
@@ -31,6 +47,14 @@ describe('count-spaces', () => {
 
     it('should count all spaces', () => {
       expect(total('  line of spaces ')).to.eql(5);
+    });
+
+    it('should throw error when not given a string', () => {
+      function testFunction() {
+        total(null);
+      }
+
+      expect(testFunction).to.throw(TypeError, /Expected a string/);
     });
   });
 });
