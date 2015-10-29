@@ -24,7 +24,7 @@
   "homepage": "https://github.com/dustinspecker/count-spaces#readme",
   "dependencies": {},
   "devDependencies": {
-    "babel": "^5.6.14",
+    "babel": "^6.0.0",
     "chai": "^3.0.0",
     "coveralls": "^2.11.2",
     "del": "^2.0.2",
