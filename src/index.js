@@ -16,7 +16,7 @@ const typeCheck = str => {
  * @param {String} str - str to analyze
  * @return {Number} - number of spaces at end of line
  */
-exports.end = function (str) {
+exports.end = str => {
   let spacesCount = 0
     , i
 
@@ -34,7 +34,7 @@ exports.end = function (str) {
  * @param {String} str - str to analyze
  * @return {Number} - number of spaces at beginning of line
  */
-exports.start = function (str) {
+exports.start = str => {
   typeCheck(str)
 
   return str.substring(0, str.search(/[^ ]/)).length
@@ -45,7 +45,7 @@ exports.start = function (str) {
  * @param {String} str - str to analyze
  * @return {Number} - number of spaces in a line
  */
-exports.total = function (str) {
+exports.total = str => {
   let match
 
   typeCheck(str)
