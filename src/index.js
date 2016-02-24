@@ -46,11 +46,9 @@ exports.start = str => {
  * @return {Number} - number of spaces in a line
  */
 exports.total = str => {
-  let match
-
   typeCheck(str)
 
-  match = str.match(/ /g)
+  const match = str.match(/ /g)
 
   if (match) {
     return match.length
